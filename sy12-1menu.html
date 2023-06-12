@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery动态菜单</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      ul{
+		margin:0px;
+      	padding:0px;
+      	list-style:none;
+      }
+      .menu{
+		border:1px solid red;
+      	width:200px;
+      	border-radius:5px;
+      }
+      .menu div{
+		background-color:red;
+      	color:white;
+      	height:40px;
+      	line-height:40px;
+      	font-size:17px;
+      	font-weight:bold;
+      	border-radius:5px;
+      	padding-left:10px;
+      	cursor:pointer;
+      	margin-bottom:2px;
+      }
+      .list{
+		display:none;
+      }
+      .list li{
+		padding-left:20px;
+      	height:25px;
+      	line-height:25px;
+      }
+    </style>
+    <script type="text/javascript" src="http://www.yyfun001.com/res/js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+          $(".list:first").slideDown("slow");
+          
+          $(".menu div").click(function(){
+    		  $(this).next().slideDown("slow").parent().siblings().children('.list').slideUp("slow");
+    	  });
+      })
+    </script>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>
+        <div>一级菜单</div>
+        <ul class="list">
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ul>
+      </li>
+      <li>
+        <div>一级菜单</div>
+        <ul class="list">
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ul>
+      </li>
+      <li>
+        <div>一级菜单</div>
+        <ul class="list">
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ul>
+      </li>
+      <li>
+        <div>一级菜单</div>
+        <ul class="list">
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ul>
+      </li>
+      <li>
+        <div>一级菜单</div>
+        <ul class="list">
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+          <li>二级菜单</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
+
